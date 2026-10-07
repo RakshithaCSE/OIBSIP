@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: #102a43;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #5bc0eb;
+}
+
+/* Hero */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 8%;
+    background: #eaf4fb;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.intro {
+    font-size: 20px;
+    color: #1677ff;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 27px;
+    color: #334e68;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:last-of-type {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    color: #486581;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 27px;
+    background: #1677ff;
+    color: #ffffff;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #0b5ed7;
+}
+
+/* Common Sections */
+.section {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    color: #102a43;
+    margin-bottom: 35px;
+}
+
+/* About */
+.about-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+    font-size: 18px;
+    color: #52606d;
+}
+
+/* Skills */
+.skills-section {
+    background: #eaf4fb;
+}
+
+.skills-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 25px 15px;
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+}
+
+.skill-card h3 {
+    color: #1677ff;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.skill-card p {
+    color: #52606d;
+}
+
+/* Projects */
+.projects-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    padding: 30px 22px;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    background: #f8fbfd;
+}
+
+.project-card h3 {
+    color: #1677ff;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #52606d;
+}
+
+/* Education */
+.education-section {
+    background: #eaf4fb;
+}
+
+.education-card {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #d9e2ec;
+}
+
+.education-card h3 {
+    color: #1677ff;
+    margin-bottom: 12px;
+    font-size: 23px;
+}
+
+.education-card p {
+    color: #52606d;
+    margin-bottom: 5px;
+}
+
+/* Contact */
+.contact-section {
+    background: #ffffff;
+}
+
+.contact-section > p {
+    font-size: 18px;
+    color: #52606d;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 8px 0;
+    color: #334e68;
+}
+
+/* Footer */
+.footer {
+    padding: 25px 8%;
+    text-align: center;
+    background: #102a43;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
