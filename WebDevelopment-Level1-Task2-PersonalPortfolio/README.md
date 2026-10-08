@@ -1,53 +1,53 @@
-# Personal Portfolio Website
+# Personal Portfolio
 
-## Project Description
+## OASIS INFOBYTE Web Development & Designing Internship
 
-A responsive personal portfolio website created as part of the OASIS INFOBYTE Web Development & Designing Internship – Level 1, Task 2.
+### Level 1 - Task 2: Personal Portfolio
 
-The website presents my profile, skills, projects, education, and contact information in a clean and responsive layout.
+This project is a responsive personal portfolio website created using HTML5 and CSS3 as part of the OASIS INFOBYTE Web Development & Designing Internship.
 
 ## Features
 
-* Sticky navigation bar
-* Home/Hero section
-* About section
+* Personal profile and avatar
+* About Me section
 * Skills section
 * Projects section
 * Education section
 * Contact section
-* Clickable Email, GitHub, and LinkedIn links
-* Responsive design for different screen sizes
-* Clean and modern user interface
+* GitHub and LinkedIn links
+* Smooth scrolling navigation
+* Responsive desktop and mobile design
+* Clean and consistent user interface
 
 ## Technologies Used
 
 * HTML5
 * CSS3
 
-## Project Structure
+## Projects Included
 
-```text
-WebDev-L1-PersonalPortfolio/
-│
-├── index.html
-├── style.css
-├── README.md
-└── screenshots/
-    ├── portfolio-home.png
-    ├── portfolio-projects.png
-    └── portfolio-contact.png
-```
+### Event Management System
 
-## How to Run
+A project designed to manage events, participants and related information efficiently.
 
-1. Open `index.html` in a web browser.
-2. Or use the VS Code Live Server extension to run the website locally.
+### Project Management Tool
+
+A web-based application for managing projects, tasks, deadlines and progress.
+
+### Insurance Management System
+
+A web application designed to manage policies, customers, claims, payments and insurance-related information.
 
 ## Author
 
-Rakshitha M V
+**Rakshitha M V**
+
+Computer Science Engineering Student
+
+Don Bosco Institute of Technology, Bengaluru
 
 ## Internship
 
-OASIS INFOBYTE – Web Development & Designing Internship
-Level 1 – Task 2: Personal Portfolio
+**OASIS INFOBYTE - Web Development & Designing Internship**
+
+**Level 1 - Task 2**
