@@ -6,19 +6,37 @@ const result = document.getElementById("result");
 const error = document.getElementById("error");
 
 convertBtn.addEventListener("click", function () {
-    const temperature = parseFloat(temperatureInput.value);
+    const inputValue = temperatureInput.value.trim();
+    const temperature = parseFloat(inputValue);
     const from = fromUnit.value;
     const to = toUnit.value;
 
     error.textContent = "";
+    result.textContent = "Result will appear here";
 
-    if (isNaN(temperature)) {
-        result.textContent = "Result will appear here";
-        error.textContent = "Please enter a valid temperature.";
+    // Validate empty or non-numeric input
+    if (inputValue === "" || !Number.isFinite(temperature)) {
+        error.textContent = "Please enter a valid numeric temperature.";
         return;
     }
 
-    // Convert the input temperature to Celsius first
+    // Absolute zero validation
+    if (from === "celsius" && temperature < -273.15) {
+        error.textContent = "Celsius temperature cannot be below -273.15°C.";
+        return;
+    }
+
+    if (from === "fahrenheit" && temperature < -459.67) {
+        error.textContent = "Fahrenheit temperature cannot be below -459.67°F.";
+        return;
+    }
+
+    if (from === "kelvin" && temperature < 0) {
+        error.textContent = "Kelvin temperature cannot be below 0 K.";
+        return;
+    }
+
+    // Convert input temperature to Celsius
     let celsius;
 
     if (from === "celsius") {
@@ -29,7 +47,7 @@ convertBtn.addEventListener("click", function () {
         celsius = temperature - 273.15;
     }
 
-    // Convert Celsius to the selected unit
+    // Convert Celsius to selected unit
     let convertedTemperature;
 
     if (to === "celsius") {
@@ -41,8 +59,10 @@ convertBtn.addEventListener("click", function () {
     }
 
     result.textContent =
-        `${temperature}° ${getUnitSymbol(from)} = ${convertedTemperature.toFixed(2)}° ${getUnitSymbol(to)}`;
+        `${formatNumber(temperature)}° ${getUnitSymbol(from)} = ` +
+        `${convertedTemperature.toFixed(2)}° ${getUnitSymbol(to)}`;
 });
+
 
 function getUnitSymbol(unit) {
     if (unit === "celsius") {
@@ -52,4 +72,9 @@ function getUnitSymbol(unit) {
     } else {
         return "K";
     }
+}
+
+
+function formatNumber(value) {
+    return Number.isInteger(value) ? value : value.toFixed(2);
 }
