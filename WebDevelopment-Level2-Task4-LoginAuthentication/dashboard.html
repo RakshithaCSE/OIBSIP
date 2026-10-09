@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SecureAccess demo dashboard.">
+    <title>Dashboard | SecureAccess</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body data-page="dashboard">
+
+    <header class="dashboard-header">
+        <a class="dashboard-brand" href="dashboard.html">
+            SecureAccess
+        </a>
+
+        <button type="button" id="logoutButton" class="logout-button">
+            Logout
+        </button>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="welcome-card">
+            <p class="eyebrow">YOUR ACCOUNT</p>
+
+            <h1>Welcome, <span id="welcomeUsername">User</span>!</h1>
+
+            <p class="subtitle">
+                You have successfully logged in to your dashboard.
+            </p>
+        </section>
+
+        <section class="dashboard-content">
+            <h2>Dashboard Overview</h2>
+
+            <p>
+                This protected page demonstrates access after a successful
+                login in the SecureAccess project.
+            </p>
+
+            <div class="account-details">
+                <div class="detail-row">
+                    <span>Username</span>
+                    <strong id="profileUsername">—</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Email address</span>
+                    <strong id="profileEmail">—</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Account status</span>
+                    <strong class="status-active">Logged in</strong>
+                </div>
+            </div>
+        </section>
+
+        <p id="dashboardMessage" class="form-message" role="status"></p>
+
+        <footer class="dashboard-footer">
+            OASIS INFOBYTE | Level 2 - Task 4
+        </footer>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create an account for the SecureAccess demo.">
+    <title>Register | SecureAccess</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body data-page="register">
+
+    <main class="auth-container">
+        <section class="auth-card">
+            <div class="brand-mark" aria-hidden="true">SA</div>
+
+            <p class="eyebrow">GET STARTED</p>
+            <h1>Create your account</h1>
+            <p class="subtitle">
+                Register to access your personal dashboard.
+            </p>
+
+            <form id="registerForm" novalidate>
+                <div class="form-group">
+                    <label for="registerUsername">Username</label>
+                    <input
+                        type="text"
+                        id="registerUsername"
+                        name="username"
+                        placeholder="Choose a username"
+                        minlength="3"
+                        maxlength="30"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="registerEmail">Email address</label>
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        name="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        name="password"
+                        placeholder="At least 8 characters, including a number"
+                        minlength="8"
+                        autocomplete="new-password"
+                        required
+                    >
+                    <small class="field-hint">
+                        Use at least 8 characters and include at least one number.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm password</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Enter your password again"
+                        autocomplete="new-password"
+                        required
+                    >
+                </div>
+
+                <p id="registerMessage" class="form-message"
+                   role="status" aria-live="polite"></p>
+
+                <button type="submit" class="primary-button">
+                    Register
+                </button>
+            </form>
+
+            <p class="switch-page">
+                Already have an account?
+                <a href="index.html">Login</a>
+            </p>
+
+            <p class="demo-notice">
+                Student project demonstration. Do not use a real password.
+            </p>
+        </section>
+    </main>
+
+</body>
+</html>
