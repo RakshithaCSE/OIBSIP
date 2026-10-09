@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | OASIS INFOBYTE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="calculator">
+        <header class="calculator-header">
+            <h1>Calculator</h1>
+            <p>Simple calculations, made easy</p>
+        </header>
+
+        <section class="calculator-screen" aria-label="Calculator display">
+            <div id="expression" class="expression" aria-live="polite"></div>
+            <output id="display" class="display" aria-live="polite">0</output>
+            <p id="message" class="message" role="status"></p>
+        </section>
+
+        <section class="buttons" aria-label="Calculator buttons">
+            <button type="button" class="utility" data-action="clear">C</button>
+            <button type="button" class="utility" data-action="delete" aria-label="Backspace">DEL</button>
+            <button type="button" class="operator" data-value="/">÷</button>
+            <button type="button" class="operator" data-value="*">×</button>
+
+            <button type="button" data-value="7">7</button>
+            <button type="button" data-value="8">8</button>
+            <button type="button" data-value="9">9</button>
+            <button type="button" class="operator" data-value="-">−</button>
+
+            <button type="button" data-value="4">4</button>
+            <button type="button" data-value="5">5</button>
+            <button type="button" data-value="6">6</button>
+            <button type="button" class="operator" data-value="+">+</button>
+
+            <button type="button" data-value="1">1</button>
+            <button type="button" data-value="2">2</button>
+            <button type="button" data-value="3">3</button>
+            <button type="button" class="equals" data-action="calculate">=</button>
+
+            <button type="button" class="zero" data-value="0">0</button>
+            <button type="button" data-action="decimal">.</button>
+        </section>
+
+        <footer class="calculator-footer">
+            <p>OASIS INFOBYTE | Level 2 - Task 1</p>
+        </footer>
+    </main>
+
+</body>
+</html>
