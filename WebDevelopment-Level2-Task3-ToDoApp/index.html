@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple and responsive task manager.">
+    <title>TaskFlow | To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="app-container">
+        <header class="app-header">
+            <p class="eyebrow">DAILY PRODUCTIVITY</p>
+            <h1>TaskFlow</h1>
+            <p class="subtitle">Organize your day, one task at a time.</p>
+        </header>
+
+        <section class="add-task-section" aria-labelledby="add-heading">
+            <h2 id="add-heading">Add a new task</h2>
+
+            <form id="taskForm">
+                <label for="taskInput">Task description</label>
+                <div class="input-row">
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="What needs to be done?"
+                        maxlength="200"
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit" id="addTaskBtn">Add Task</button>
+                </div>
+                <p id="formMessage" class="form-message" role="status"></p>
+            </form>
+        </section>
+
+        <section class="task-section" aria-labelledby="pending-heading">
+            <div class="section-title">
+                <h2 id="pending-heading">Pending Tasks</h2>
+                <span id="pendingCount" class="count-badge">0 pending</span>
+            </div>
+
+            <ul id="pendingList" class="task-list" aria-label="Pending tasks"></ul>
+
+            <p id="pendingEmpty" class="empty-state">
+                You're all caught up! Add a task to get started.
+            </p>
+        </section>
+
+        <section class="task-section completed-section"
+                 aria-labelledby="completed-heading">
+            <div class="section-title">
+                <h2 id="completed-heading">Completed Tasks</h2>
+                <span id="completedCount" class="count-badge completed-badge">
+                    0 completed
+                </span>
+            </div>
+
+            <ul id="completedList" class="task-list"
+                aria-label="Completed tasks"></ul>
+
+            <p id="completedEmpty" class="empty-state">
+                Completed tasks will appear here.
+            </p>
+        </section>
+
+        <footer class="app-footer">
+            <p>Stay organized. Keep moving forward.</p>
+            <p>OASIS INFOBYTE | Level 2 - Task 3</p>
+        </footer>
+    </main>
+
+</body>
+</html>
